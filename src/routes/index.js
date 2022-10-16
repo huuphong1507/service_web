@@ -11,7 +11,7 @@ import Search from '~/pages/Search';
 const publicRoutes = [
     { path: '/', component: Home },
     { path: '/following', component: Following },
-    { path: '/shoppingcart', component: ShoppingCart, layout: HeaderOnly },
+    { path: '/shoppingcart', component: ShoppingCart },
     { path: '/search', component: Search, layout: null },
 ];
 

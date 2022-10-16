@@ -1,5 +1,11 @@
+import Topbar from '../Topbar/Topbar';
+
 function Header() {
-    return <h2>Header</h2>;
+    return (
+        <header>
+            <Topbar />
+        </header>
+    );
 }
 
 export default Header;
