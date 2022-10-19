@@ -1,5 +1,7 @@
+import SliderCategories from '../SliderCategories/SliderCategories';
+
 function Sidebar() {
-    return <h2>Sidebar</h2>;
+    return <SliderCategories />;
 }
 
 export default Sidebar;

@@ -30,6 +30,10 @@
     color: #1c1c1c;
 }
 
+.header__icon__email {
+    margin-right: 6px;
+}
+
 .header-top__bar__left__shipping {
     font-size: 14px;
     color: #1c1c1c;
@@ -47,11 +51,15 @@
     display: inline-block;
 }
 
-.header-top__bar__right__socials a {
+.header-top__bar__right__socials .socials-link {
     font-size: 14px;
     display: inline-block;
     color: #1c1c1c;
     margin-right: 20px;
+}
+
+.socials-link:hover {
+    opacity: 0.6;
 }
 
 .header-top__bar__right__language {
@@ -68,14 +76,15 @@
 .arrow-down {
     font-size: 10px;
     color: #1c1c1c;
+    margin-left: 8px;
 }
 
-.header-top__bar__right__auth a {
+.header-top__bar__right__auth .header-top__bar__right__auth__link {
     font-size: 14px;
     color: #1c1c1c;
 }
 
-.header-top__bar__right__auth a > i {
+.header-top__bar__right__auth__icon {
     margin-right: 6px;
 }
 

@@ -19,7 +19,10 @@ function Topbar() {
                         <section className={cx('header-top__bar')}>
                             <div className={cx('header-top__bar__left')}>
                                 <span className={cx('header-top__bar__left__email')}>
-                                    <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
+                                    <FontAwesomeIcon
+                                        className={cx('header__icon__email')}
+                                        icon={faEnvelope}
+                                    ></FontAwesomeIcon>
                                     hello@colorlib.com
                                 </span>
                                 <span className={cx('header-top__bar__left__shipping')}>
@@ -28,19 +31,19 @@ function Topbar() {
                             </div>
                             <div className={cx('header-top__bar__right')}>
                                 <div className={cx('header-top__bar__right__socials')}>
-                                    <Link href="#">
+                                    <Link className={cx('socials-link')} href="#">
                                         <FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon>
                                     </Link>
-                                    <Link href="#">
+                                    <Link className={cx('socials-link')} href="#">
                                         <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>
                                     </Link>
-                                    <Link href="#">
+                                    <Link className={cx('socials-link')} href="#">
                                         <FontAwesomeIcon
                                             icon={faLinkedinIn}
                                             className={cx('fa-brands fa-linkedin-in')}
                                         ></FontAwesomeIcon>
                                     </Link>
-                                    <Link href="#">
+                                    <Link className={cx('socials-link')} href="#">
                                         <FontAwesomeIcon icon={faPinterestP}></FontAwesomeIcon>
                                     </Link>
                                 </div>
@@ -60,8 +63,12 @@ function Topbar() {
                                     </span>
                                 </div>
                                 <div className={cx('header-top__bar__right__auth')}>
-                                    <Link href="#">
-                                        <FontAwesomeIcon icon={faUser}></FontAwesomeIcon>Login{' '}
+                                    <Link className={cx('header-top__bar__right__auth__link')} href="#">
+                                        <FontAwesomeIcon
+                                            className={cx('header-top__bar__right__auth__icon')}
+                                            icon={faUser}
+                                        ></FontAwesomeIcon>
+                                        Login
                                     </Link>
                                 </div>
                             </div>

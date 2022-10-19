@@ -1,0 +1,130 @@
+.categories {
+    margin-bottom: 80px;
+}
+
+.categories-container {
+    max-width: 1170px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+// .categories-list {
+//     display: flex;
+//     align-items: center;
+//     gap: 0 30px;
+// } 
+
+.categories-item {
+    background-image: url(https://preview.colorlib.com/theme/ogani/img/categories/cat-1.jpg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    width: 262px;
+    height: 270px;
+    position: relative;
+}
+
+.categories-item__title {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 0 20px;
+    bottom: 20px;
+    text-align: center;
+}
+
+.categories-item__title .categories-item__title__item{
+    font-size: 18px;
+    color: #1c1c1c;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 12px 0 10px;
+    background-color: #ffffff;
+    display: block;
+}
+
+
+/* Slick Slider */
+// .slick-list {
+//     overflow: hidden;
+// }
+
+// .slick-track {
+//     display: flex;
+//     gap: 0 30px;
+//     /* margin: 0 50px; */
+// }
+
+// .slick-prev,
+// .slick-next {
+//     font-size: 18px;
+//     color: #1c1c1c;
+//     height: 70px;
+//     width: 30px;
+//     line-height: 70px;
+//     text-align: center;
+//     border: 1px solid #ebebeb;
+//     background-color: #fff;
+// }
+
+// .slick-prev {
+//     position: relative;
+//     left: -35px;
+//     top: -50px;
+//     transform: translateY(225px);
+//     background: #ffffff;
+// }
+
+// .slick-next {
+//     position: relative;
+//     right: -1144px;
+//     bottom: 165px;
+// }
+
+
+// Swiper CSS
+
+.carousel-container {
+  max-width: 1170px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.swiper-item {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    width: 256px;
+    height: 270px;
+    position: relative;
+}
+
+.swiper-button__left,
+.swiper-button__right {
+    font-size: 18px;
+    color: #1c1c1c;
+    height: 70px;
+    width: 30px;
+    line-height: 70px;
+    text-align: center;
+    border: 1px solid #ebebeb;
+    background-color: #fff;
+}
+
+.swiper-button__left {
+    position: relative;
+    left: -46px;
+    top: -50px;
+    transform: translateY(225px);
+    background: #ffffff;
+}
+
+.swiper-button__right {
+    position: relative;
+    right: -1158px;
+    bottom: 165px;
+}
+
+  
