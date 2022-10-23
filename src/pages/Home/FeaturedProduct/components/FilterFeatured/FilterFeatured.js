@@ -1,5 +1,4 @@
 import classNames from 'classnames/bind';
-import { useEffect } from 'react';
 import styles from '../../FeaturedProduct.module.scss';
 
 const cx = classNames.bind(styles);

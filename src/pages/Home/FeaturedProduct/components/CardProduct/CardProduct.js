@@ -1,15 +1,22 @@
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 import classNames from 'classnames/bind';
 import styles from '../../FeaturedProduct.module.scss';
 import { faCartShopping, faHeart, faRepeat } from '@fortawesome/free-solid-svg-icons';
+
+import { motion, AnimatePresence } from 'framer-motion';
 
 const cx = classNames.bind(styles);
 
 function CardProduct({ product }) {
     return (
-        <div className={cx('featured-list__item')}>
+        <motion.div
+            layout
+            animate={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
+            exit={{ opacity: 0 }}
+            className={cx('featured-list__item')}
+        >
             <div className={cx('featured-image')}>
                 <img src={product.img} alt={product.title} />
                 <ul className={cx('featured-image__menu')}>
@@ -40,7 +47,7 @@ function CardProduct({ product }) {
                     <strong>${product.price}</strong>
                 </h5>
             </div>
-        </div>
+        </motion.div>
     );
 }
 

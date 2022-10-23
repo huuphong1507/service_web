@@ -3,6 +3,7 @@ import styles from './FeaturedProduct.module.scss';
 import FilterFeatured from './components/FilterFeatured/FilterFeatured';
 import { useEffect, useState } from 'react';
 import CardProduct from './components/CardProduct/CardProduct';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const cx = classNames.bind(styles);
 
@@ -46,11 +47,13 @@ function FeaturedProduct() {
                     setFilters={setFilters}
                     setActiveFilters={setActiveFilters}
                 />
-                <div className={cx('featured-list')}>
-                    {filters.map((product) => (
-                        <CardProduct key={product.id} product={product} />
-                    ))}
-                </div>
+                <motion.div layout className={cx('featured-list')}>
+                    <AnimatePresence>
+                        {filters.map((product) => (
+                            <CardProduct key={product.id} product={product} />
+                        ))}
+                    </AnimatePresence>
+                </motion.div>
             </div>
         </section>
     );
