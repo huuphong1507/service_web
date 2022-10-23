@@ -1,15 +1,14 @@
-import ContentHome from './Content/ContentHome/ContentHome';
-import FeaturedProduct from './Content/ContentHome/SectionsHome/FeaturedProduct/FeaturedProduct';
-import FromBlog from './Content/ContentHome/SectionsHome/FromBlog/FromBlog';
-import Slider from './Content/ContentHome/SectionsHome/Slider';
+import FeaturedProduct from './FeaturedProduct/FeaturedProduct';
+import FromBlog from './FromBlog/FromBlog';
+import SliderCategories from './SliderCategories/SliderCategories';
 
 function Home() {
     return (
-        <ContentHome>
-            <Slider />
+        <>
+            <SliderCategories />
             <FeaturedProduct />
             <FromBlog />
-        </ContentHome>
+        </>
     );
 }
 
