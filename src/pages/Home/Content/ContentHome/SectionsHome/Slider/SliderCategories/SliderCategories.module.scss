@@ -111,6 +111,12 @@
     text-align: center;
     border: 1px solid #ebebeb;
     background-color: #fff;
+    cursor: pointer;
+}
+
+.swiper-button__left:hover,
+.swiper-button__right:hover {
+    opacity: 0.6;
 }
 
 .swiper-button__left {

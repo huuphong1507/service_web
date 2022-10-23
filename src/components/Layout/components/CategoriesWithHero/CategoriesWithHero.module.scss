@@ -44,7 +44,7 @@
     padding-left: 40px;
     padding-top: 10px;
     padding-bottom: 12px;
-    animation: upAndDown 0.2s linear;
+    animation: growth linear 0.2s;
 }
 
 .menu-item__categories a {
@@ -54,12 +54,13 @@
     display: block;
 }
 
-@keyframes upAndDown {
+@keyframes growth {
     from {
-        height: 0;
+        transform: scale(0.7);
     }
+
     to {
-        height: 100%;
+        transform: scale(1);
     }
 }
 
