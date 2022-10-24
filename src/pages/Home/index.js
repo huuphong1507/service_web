@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import CategoriesWithHero from '~/components/Layout/components/CategoriesWithHero/CategoriesWithHero';
 import FeaturedProduct from './FeaturedProduct/FeaturedProduct';
 import FromBlog from './FromBlog/FromBlog';
 import SliderCategories from './SliderCategories/SliderCategories';
@@ -33,6 +34,7 @@ function Home() {
 
     return (
         <>
+            <CategoriesWithHero />
             <SliderCategories products={products} />
             <FeaturedProduct products={products} filters={filters} setFilters={setFilters} />
             <FromBlog blogs={blogs} />

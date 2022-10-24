@@ -29,8 +29,8 @@ function Navbar() {
                             </Link>
                         </li>
                         <li className={cx('menu-item')}>
-                            <Link href="#" className={cx('menu-link')}>
-                                PAGES
+                            <Link href="/shoppingcart" className={cx('menu-link')}>
+                                SHOPPING CART
                             </Link>
                         </li>
                         <li className={cx('menu-item')}>

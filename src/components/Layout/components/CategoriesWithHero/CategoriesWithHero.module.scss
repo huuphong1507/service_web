@@ -16,6 +16,7 @@
 
 .hero__categories__left {
     width: 262px;
+    position: relative;
 }
 
 .categories__all {
@@ -45,9 +46,15 @@
     padding-top: 10px;
     padding-bottom: 12px;
     animation: growth linear 0.2s;
+    position: absolute;
+    left: 0;
+    top: 46px;
+    width: 100%;
+    z-index: 9;
+    background-color: #fff;
 }
 
-.menu-item__categories a {
+.menu-item__categories .menu-link__categories {
     font-size: 16px;
     color: #1c1c1c;
     line-height: calc(39 / 16);
@@ -66,10 +73,6 @@
 
 
 /* hero__categories__right */
-.hero__categories__right {
-
-}
-
 .hero__search {
     max-width: 848px;
     margin-bottom: 30px;
@@ -77,11 +80,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.hero__search__form {
-    
-
 }
 
 .form__categories {

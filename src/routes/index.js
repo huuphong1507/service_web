@@ -1,8 +1,8 @@
 // Pages
 import Home from '~/pages/Home';
 import Following from '~/pages/Following';
-import ShoppingCart from '~/pages/ShoppingCart';
 import Search from '~/pages/Search';
+import ShoppingCart from '~/pages/ShoppingCart/ShoppingCart';
 
 // Public routes
 const publicRoutes = [

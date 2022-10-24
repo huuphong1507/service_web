@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 import styles from '../../FeaturedProduct.module.scss';
 import { faCartShopping, faHeart, faRepeat } from '@fortawesome/free-solid-svg-icons';
 
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const cx = classNames.bind(styles);
 

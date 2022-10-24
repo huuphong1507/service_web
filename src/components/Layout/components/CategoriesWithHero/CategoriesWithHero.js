@@ -5,10 +5,11 @@ import classNames from 'classnames/bind';
 import styles from './CategoriesWithHero.module.scss';
 import { faAngleDown, faBars, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
+import BannerDefault from './BannerDefault';
 
 const cx = classNames.bind(styles);
 
-function Categories() {
+function CategoriesWithHero({ children }) {
     const [showDepartments, setShowDepartments] = useState(true);
 
     function hideDepartments() {
@@ -115,24 +116,13 @@ function Categories() {
                                 </div>
                             </div>
                         </div>
-                        <div className={cx('hero__item')}>
-                            <div className={cx('hero__item__text')}>
-                                <span>FRUIT FRESH</span>
-                                <h2>
-                                    Vegetable <br />
-                                    100% Organic
-                                </h2>
-                                <p>Free Pickup and Delivery Available</p>
-                                <Link href="#" className={cx('primary-btn')}>
-                                    SHOP NOW
-                                </Link>
-                            </div>
-                        </div>
+                        {!children && <BannerDefault />}
                     </div>
                 </div>
             </div>
+            {!!children && <>{children}</>}
         </section>
     );
 }
 
-export default Categories;
+export default CategoriesWithHero;
