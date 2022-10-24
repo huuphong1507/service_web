@@ -1,9 +1,10 @@
+import { motion, AnimatePresence } from 'framer-motion';
 import classNames from 'classnames/bind';
 import styles from './FeaturedProduct.module.scss';
+
 import FilterFeatured from './components/FilterFeatured/FilterFeatured';
 import { useEffect, useState } from 'react';
 import CardProduct from './components/CardProduct/CardProduct';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const cx = classNames.bind(styles);
 

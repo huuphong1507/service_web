@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
 import styles from './Topbar.module.scss';
 import { faAngleDown, faUser } from '@fortawesome/free-solid-svg-icons';
-import { faFacebook, faLinkedinIn, faPinterestP, faTwitch, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faLinkedinIn, faPinterestP, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import Navbar from '../Navbar/Navbar';
 
