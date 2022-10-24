@@ -18,11 +18,7 @@ import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 const cx = classNames.bind(styles);
 
-const image = 'https://preview.colorlib.com/theme/ogani/img/categories/cat-1.jpg.webp';
-
-function SliderCategories() {
-    const images = new Array(6).fill({ url: image });
-
+function SliderCategories({ products }) {
     const swiperRef = useRef(SwiperRef);
 
     const handlePrev = () => {
@@ -56,12 +52,12 @@ function SliderCategories() {
                         swiperRef.current = swiper;
                     }}
                 >
-                    {images.map((image, index) => (
-                        <SwiperSlide className={cx('swiper-item')} key={index}>
-                            <img height="256" width="270" alt="img" className="image" src={image.url} />
+                    {products.map((product, index) => (
+                        <SwiperSlide className={cx('swiper-item')} key={product.id}>
+                            <img height="256" width="270" alt="img" className="image" src={product.img} />
                             <h5 className={cx('categories-item__title')}>
                                 <Link className={cx('categories-item__title__item')} href="#">
-                                    FRESH FRUIT
+                                    {product.title}
                                 </Link>
                             </h5>
                         </SwiperSlide>
@@ -71,53 +67,6 @@ function SliderCategories() {
                     <FontAwesomeIcon icon={faAngleRight} />
                 </div>
             </div>
-
-            {/* <div className={cx('categories-container')}>
-                <div className={cx('categories-list')}>
-                    <div className={cx('categories-item')}>
-                        <h5 className={cx('categories-item__title')}>
-                            <Link className={cx('categories-item__title__item')} href="#">
-                                FRESH FRUIT
-                            </Link>
-                        </h5>
-                    </div>
-                    <div className={cx('categories-item')}>
-                        <h5 className={cx('categories-item__title')}>
-                            <Link className={cx('categories-item__title__item')} href="#">
-                                FRESH FRUIT
-                            </Link>
-                        </h5>
-                    </div>
-                    <div className={cx('categories-item')}>
-                        <h5 className={cx('categories-item__title')}>
-                            <Link className={cx('categories-item__title__item')} href="#">
-                                FRESH FRUIT
-                            </Link>
-                        </h5>
-                    </div>
-                    <div className={cx('categories-item')}>
-                        <h5 className={cx('categories-item__title')}>
-                            <Link className={cx('categories-item__title__item')} href="#">
-                                FRESH FRUIT
-                            </Link>
-                        </h5>
-                    </div>
-                    <div className={cx('categories-item')}>
-                        <h5 className={cx('categories-item__title')}>
-                            <Link className={cx('categories-item__title__item')} href="#">
-                                FRESH FRUIT
-                            </Link>
-                        </h5>
-                    </div>
-                    <div className={cx('categories-item')}>
-                        <h5 className={cx('categories-item__title')}>
-                            <Link className={cx('categories-item__title__item')} href="#">
-                                FRESH FRUIT
-                            </Link>
-                        </h5>
-                    </div>
-                </div>
-            </div> */}
         </section>
     );
 }

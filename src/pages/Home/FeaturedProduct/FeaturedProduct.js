@@ -8,21 +8,8 @@ import CardProduct from './components/CardProduct/CardProduct';
 
 const cx = classNames.bind(styles);
 
-function FeaturedProduct() {
-    const [products, setProducts] = useState([]);
-    const [filters, setFilters] = useState([]);
+function FeaturedProduct({ products, filters, setFilters }) {
     const [activeFilters, setActiveFilters] = useState('All');
-
-    useEffect(() => {
-        fetchApiProducts();
-    }, []);
-
-    const fetchApiProducts = async () => {
-        const data = await fetch('https://ogani-api-web.herokuapp.com/api/products');
-        const products = await data.json();
-        setProducts(products);
-        setFilters(products);
-    };
 
     useEffect(() => {
         if (activeFilters === 'All') {
@@ -34,7 +21,7 @@ function FeaturedProduct() {
             });
             setFilters(productByCategoryName);
         }
-    }, [activeFilters, products]);
+    }, [activeFilters, products, setFilters]);
 
     return (
         <section className={cx('featured')}>
