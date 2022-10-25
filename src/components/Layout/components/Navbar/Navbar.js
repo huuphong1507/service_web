@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import classNames from 'classnames/bind';
@@ -6,6 +6,7 @@ import styles from './Navbar.module.scss';
 
 import logo from '~/assets/images/logo.png';
 import { faBagShopping, faHeart } from '@fortawesome/free-solid-svg-icons';
+import config from '~/config';
 
 const cx = classNames.bind(styles);
 
@@ -19,42 +20,65 @@ function Navbar() {
                     </Link>
                     <ul className={cx('menu')}>
                         <li className={cx('menu-item')}>
-                            <Link href="#" className={cx('menu-link')}>
+                            <NavLink
+                                className={(nav) => cx('menu-link', { active: nav.isActive })}
+                                to={config.routes.home}
+                                end
+                            >
                                 HOME
-                            </Link>
+                            </NavLink>
                         </li>
                         <li className={cx('menu-item')}>
-                            <Link href="#" className={cx('menu-link')}>
+                            <NavLink
+                                className={(nav) => cx('menu-link', { active: nav.isActive })}
+                                to={config.routes.shop}
+                                end
+                            >
                                 SHOP
-                            </Link>
+                            </NavLink>
                         </li>
                         <li className={cx('menu-item')}>
-                            <Link href="/shoppingcart" className={cx('menu-link')}>
+                            <NavLink
+                                className={(nav) => cx('menu-link', { active: nav.isActive })}
+                                to={config.routes.shoppingcart}
+                                end
+                            >
                                 SHOPPING CART
-                            </Link>
+                            </NavLink>
                         </li>
                         <li className={cx('menu-item')}>
-                            <Link href="#" className={cx('menu-link')}>
+                            <NavLink
+                                className={(nav) => cx('menu-link', { active: nav.isActive })}
+                                to={config.routes.blog}
+                                end
+                            >
                                 BLOG
-                            </Link>
+                            </NavLink>
                         </li>
                         <li className={cx('menu-item')}>
-                            <Link href="#" className={cx('menu-link')}>
+                            <NavLink
+                                className={(nav) => cx('menu-link', { active: nav.isActive })}
+                                to={config.routes.contact}
+                                end
+                            >
                                 CONTACT
-                            </Link>
+                            </NavLink>
                         </li>
                     </ul>
                     <div className={cx('nav-bar__cart')}>
                         <div className={cx('nav-bar__icon')}>
                             <div className={cx('nav-bar__icon__heart')}>
                                 <Link className={cx('nav-bar__icon__link')} href="#">
-                                    <FontAwesomeIcon icon={faHeart}></FontAwesomeIcon>
+                                    <FontAwesomeIcon className={cx('nav-bar__icon__link__icon-mini')} icon={faHeart} />
                                     <span>6</span>
                                 </Link>
                             </div>
                             <div className={cx('nav-bar__icon__bag')}>
                                 <Link className={cx('nav-bar__icon__link')} href="#">
-                                    <FontAwesomeIcon icon={faBagShopping}></FontAwesomeIcon>
+                                    <FontAwesomeIcon
+                                        className={cx('nav-bar__icon__link__icon-mini')}
+                                        icon={faBagShopping}
+                                    />
                                     <span>7</span>
                                 </Link>
                             </div>
