@@ -3,6 +3,7 @@ import styles from './ShoppingCart.module.scss';
 
 import CategoriesWithHero from '~/components/Layout/components/CategoriesWithHero/CategoriesWithHero';
 import BannerCart from '~/components/Layout/components/BannerCart/BannerCart';
+import ProductCart from './ProductCart/ProductCart';
 
 const cx = classNames.bind(styles);
 
@@ -14,7 +15,7 @@ function ShoppingCart() {
             </CategoriesWithHero>
             <div className={cx('wrapper')}>
                 <main className="content">
-                    <h1>Hello</h1>
+                    <ProductCart />
                 </main>
             </div>
         </>

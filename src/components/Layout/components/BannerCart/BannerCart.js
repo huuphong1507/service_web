@@ -1,7 +1,8 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import classNames from 'classnames/bind';
 import styles from './BannerCart.module.scss';
+import config from '~/config';
 
 const cx = classNames.bind(styles);
 
@@ -12,9 +13,13 @@ function BannerCart() {
                 <div className={cx('hero__item__text')}>
                     <h2>Shopping Cart</h2>
                     <div className={cx('hero__item__options')}>
-                        <Link className={cx('hero__item__options__link')} href="#">
+                        <NavLink
+                            className={(nav) => cx('hero__item__options__link', { active: nav.isActive })}
+                            to={config.routes.home}
+                            end
+                        >
                             Home
-                        </Link>
+                        </NavLink>
                         <span>Shopping Cart</span>
                     </div>
                 </div>

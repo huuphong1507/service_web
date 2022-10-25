@@ -73,7 +73,11 @@
 
 
 /* hero__categories__right */
-.hero__search {
+.hero__search__form {
+    margin-right: 42px;
+}
+
+.hero__categories__right .hero__search {
     max-width: 848px;
     margin-bottom: 30px;
     overflow: hidden;
@@ -131,6 +135,10 @@
     border: none;
 }
 
+.btn-search:hover {
+    opacity: 0.8;
+}
+
 .hero__search__phone {
     display: flex;
     align-items: center;
@@ -146,6 +154,12 @@
     line-height: 50px;
     text-align: center;
     border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+        color: #f5f5f5;
+        background-color: #7fad39;
+    }
 }
 
 .hero__search__phone__text > h5 {

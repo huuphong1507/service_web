@@ -108,7 +108,7 @@ function CategoriesWithHero({ children }) {
                             </div>
                             <div className={cx('hero__search__phone')}>
                                 <div className={cx('hero__search__phone__icon')}>
-                                    <FontAwesomeIcon icon={faPhone} />
+                                    <FontAwesomeIcon className={cx('phone__icon')} icon={faPhone} />
                                 </div>
                                 <div className={cx('hero__search__phone__text')}>
                                     <h5>+65 11.188.888</h5>

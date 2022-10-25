@@ -8,6 +8,9 @@
     padding: 45px 0 40px;
 }
 
+.hero-container {
+    margin: 0 auto;
+}
 
 .hero__item__text > h2 {
     text-align: center;
@@ -25,6 +28,10 @@
     color: #ffffff;
     font-weight: 700;
     margin-right: 20px;
+
+    &:hover {
+        opacity: 0.8;
+    }
 }
 
 .hero__item__options > span {
