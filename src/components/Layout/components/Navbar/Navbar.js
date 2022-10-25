@@ -15,9 +15,13 @@ function Navbar() {
         <nav className={cx('nav-bar')}>
             <div className={cx('nav-bar__container')}>
                 <div className={cx('nav-bar__flex')}>
-                    <Link className={cx('nav-bar__logo')} href="#">
+                    <NavLink
+                        className={(nav) => cx('nav-bar__logo', { active: nav.isActive })}
+                        to={config.routes.home}
+                        end
+                    >
                         <img src={logo} alt="" />
-                    </Link>
+                    </NavLink>
                     <ul className={cx('menu')}>
                         <li className={cx('menu-item')}>
                             <NavLink
@@ -67,21 +71,29 @@ function Navbar() {
                     </ul>
                     <div className={cx('nav-bar__cart')}>
                         <div className={cx('nav-bar__icon')}>
-                            <div className={cx('nav-bar__icon__heart')}>
-                                <Link className={cx('nav-bar__icon__link')} href="#">
+                            <NavLink
+                                className={(nav) => cx('nav-bar__icon__heart', { active: nav.isActive })}
+                                to={config.routes.shoppingcart}
+                                end
+                            >
+                                <div className={cx('nav-bar__icon__link')}>
                                     <FontAwesomeIcon className={cx('nav-bar__icon__link__icon-mini')} icon={faHeart} />
                                     <span>6</span>
-                                </Link>
-                            </div>
-                            <div className={cx('nav-bar__icon__bag')}>
-                                <Link className={cx('nav-bar__icon__link')} href="#">
+                                </div>
+                            </NavLink>
+                            <NavLink
+                                className={(nav) => cx('nav-bar__icon__bag', { active: nav.isActive })}
+                                to={config.routes.shoppingcart}
+                                end
+                            >
+                                <div className={cx('nav-bar__icon__link')}>
                                     <FontAwesomeIcon
                                         className={cx('nav-bar__icon__link__icon-mini')}
                                         icon={faBagShopping}
                                     />
                                     <span>7</span>
-                                </Link>
-                            </div>
+                                </div>
+                            </NavLink>
                         </div>
                         <div className={cx('nav-bar__price')}>
                             <p>
