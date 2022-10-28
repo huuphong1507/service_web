@@ -7,10 +7,12 @@ import styles from './Navbar.module.scss';
 import logo from '~/assets/images/logo.png';
 import { faBagShopping, faHeart } from '@fortawesome/free-solid-svg-icons';
 import config from '~/config';
+import { useCart } from '~/store/Cart';
 
 const cx = classNames.bind(styles);
 
 function Navbar() {
+    const { state } = useCart();
     return (
         <nav className={cx('nav-bar')}>
             <div className={cx('nav-bar__container')}>
@@ -91,7 +93,7 @@ function Navbar() {
                                         className={cx('nav-bar__icon__link__icon-mini')}
                                         icon={faBagShopping}
                                     />
-                                    <span>7</span>
+                                    <span>{state.length}</span>
                                 </div>
                             </NavLink>
                         </div>

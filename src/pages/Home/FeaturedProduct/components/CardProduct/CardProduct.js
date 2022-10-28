@@ -5,10 +5,17 @@ import styles from '../../FeaturedProduct.module.scss';
 import { faCartShopping, faHeart, faRepeat } from '@fortawesome/free-solid-svg-icons';
 
 import { motion } from 'framer-motion';
+import { useCart } from '~/store/Cart';
 
 const cx = classNames.bind(styles);
 
 function CardProduct({ product }) {
+    const { dispatch } = useCart();
+
+    const handleAddToCart = (item) => {
+        dispatch({ type: 'ADD', payload: item });
+    };
+
     return (
         <motion.div
             layout
@@ -30,7 +37,7 @@ function CardProduct({ product }) {
                             <FontAwesomeIcon icon={faRepeat} />
                         </Link>
                     </li>
-                    <li className={cx('featured-image__menu-item')}>
+                    <li className={cx('featured-image__menu-item')} onClick={() => handleAddToCart(product)}>
                         <Link href="#" className={cx('featured-image__menu-link')}>
                             <FontAwesomeIcon icon={faCartShopping} />
                         </Link>
