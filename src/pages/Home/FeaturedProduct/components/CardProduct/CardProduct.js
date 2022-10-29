@@ -4,6 +4,7 @@ import classNames from 'classnames/bind';
 import styles from '../../FeaturedProduct.module.scss';
 import { faCartShopping, faHeart, faRepeat } from '@fortawesome/free-solid-svg-icons';
 
+import toast from 'react-hot-toast';
 import { motion } from 'framer-motion';
 import { useCart } from '~/store/Cart';
 
@@ -14,6 +15,7 @@ function CardProduct({ product }) {
 
     const handleAddToCart = (item) => {
         dispatch({ type: 'ADD', payload: item });
+        toast.success('Add product successful!.');
     };
 
     return (

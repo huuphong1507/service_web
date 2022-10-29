@@ -11,7 +11,7 @@ function FromBlog({ blogs }) {
                 <h2 className={cx('blog-heading')}>From The Blog</h2>
                 <div className={cx('blog-list')}>
                     {blogs.map((blog) => (
-                        <BlogItem key={blog.id} blog={blog} />
+                        <BlogItem key={blog.blogId} blog={blog} />
                     ))}
                 </div>
             </div>

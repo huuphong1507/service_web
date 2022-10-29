@@ -5,14 +5,25 @@ const CartStateContext = createContext();
 const reducer = (state, action) => {
     switch (action.type) {
         case 'ADD':
-            const { title, img, price } = action.payload;
+            const { title, img, price, productId } = action.payload;
             const newItem = {
-                id: new Date().getTime(),
+                cartId: new Date().getTime(),
                 title,
                 img,
                 price,
                 quantity: 1,
+                productId,
             };
+
+            const newProductAdd = [...state];
+
+            const entryProduct = newProductAdd.find((product) => product.productId === action.payload.productId);
+
+            if (entryProduct) {
+                entryProduct.quantity += 1;
+                return newProductAdd;
+            }
+
             return [...state, newItem];
 
         case 'REMOVE':

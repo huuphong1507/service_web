@@ -52,8 +52,8 @@ function SliderCategories({ products }) {
                         swiperRef.current = swiper;
                     }}
                 >
-                    {products.map((product, index) => (
-                        <SwiperSlide className={cx('swiper-item')} key={product.id}>
+                    {products.map((product) => (
+                        <SwiperSlide className={cx('swiper-item')} key={product.productId}>
                             <img height="256" width="270" alt="img" className="image" src={product.img} />
                             <h5 className={cx('categories-item__title')}>
                                 <Link className={cx('categories-item__title__item')} href="#">

@@ -39,7 +39,7 @@ function FeaturedProduct({ products, filters, setFilters, handlePageClick, pageC
                 <motion.div layout className={cx('featured-list')}>
                     <AnimatePresence>
                         {filters.map((product) => (
-                            <CardProduct key={product.id} product={product} />
+                            <CardProduct key={product.productId} product={product} />
                         ))}
                     </AnimatePresence>
                 </motion.div>
