@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import classNames from 'classnames/bind';
@@ -9,8 +9,11 @@ import BannerDefault from './BannerDefault';
 
 const cx = classNames.bind(styles);
 
+const shouldHideDepartments = ['/shop', '/shoppingcart', '/blog', '/contact'];
+
 function CategoriesWithHero({ children }) {
-    const [showDepartments, setShowDepartments] = useState(true);
+    const { pathname } = useLocation();
+    const [showDepartments, setShowDepartments] = useState(shouldHideDepartments.includes(pathname) ? false : true);
 
     function hideDepartments() {
         setShowDepartments(!showDepartments);

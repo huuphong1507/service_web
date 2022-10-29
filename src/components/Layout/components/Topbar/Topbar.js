@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import classNames from 'classnames/bind';
@@ -7,6 +7,7 @@ import { faAngleDown, faUser } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faLinkedinIn, faPinterestP, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import Navbar from '../Navbar/Navbar';
+import config from '~/config';
 
 const cx = classNames.bind(styles);
 
@@ -23,7 +24,7 @@ function Topbar() {
                                         className={cx('header__icon__email')}
                                         icon={faEnvelope}
                                     ></FontAwesomeIcon>
-                                    hello@colorlib.com
+                                    pp07@colorlib.com
                                 </span>
                                 <span className={cx('header-top__bar__left__shipping')}>
                                     Free Shipping for all Order of $99
@@ -63,13 +64,17 @@ function Topbar() {
                                     </span>
                                 </div>
                                 <div className={cx('header-top__bar__right__auth')}>
-                                    <Link className={cx('header-top__bar__right__auth__link')} href="#">
+                                    <NavLink
+                                        className={cx('header-top__bar__right__auth__link')}
+                                        to={config.routes.signin}
+                                        end
+                                    >
                                         <FontAwesomeIcon
                                             className={cx('header-top__bar__right__auth__icon')}
                                             icon={faUser}
                                         ></FontAwesomeIcon>
                                         Login
-                                    </Link>
+                                    </NavLink>
                                 </div>
                             </div>
                         </section>
