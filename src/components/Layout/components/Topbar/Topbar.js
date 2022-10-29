@@ -32,19 +32,19 @@ function Topbar() {
                             </div>
                             <div className={cx('header-top__bar__right')}>
                                 <div className={cx('header-top__bar__right__socials')}>
-                                    <Link className={cx('socials-link')} href="#">
+                                    <Link className={cx('socials-link')} to="#">
                                         <FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon>
                                     </Link>
-                                    <Link className={cx('socials-link')} href="#">
+                                    <Link className={cx('socials-link')} to="#">
                                         <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>
                                     </Link>
-                                    <Link className={cx('socials-link')} href="#">
+                                    <Link className={cx('socials-link')} to="#">
                                         <FontAwesomeIcon
                                             icon={faLinkedinIn}
                                             className={cx('fa-brands fa-linkedin-in')}
                                         ></FontAwesomeIcon>
                                     </Link>
-                                    <Link className={cx('socials-link')} href="#">
+                                    <Link className={cx('socials-link')} to="#">
                                         <FontAwesomeIcon icon={faPinterestP}></FontAwesomeIcon>
                                     </Link>
                                 </div>

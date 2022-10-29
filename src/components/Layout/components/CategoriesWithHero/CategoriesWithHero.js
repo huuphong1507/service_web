@@ -37,57 +37,57 @@ function CategoriesWithHero({ children }) {
                             className={cx('menu__categories')}
                         >
                             <li className={cx('menu-item__categories')}>
-                                <Link href="#" className={cx('menu-link__categories')}>
+                                <Link to="#" className={cx('menu-link__categories')}>
                                     Fresh Meat
                                 </Link>
                             </li>
                             <li className={cx('menu-item__categories')}>
-                                <Link href="#" className={cx('menu-link__categories')}>
+                                <Link to="#" className={cx('menu-link__categories')}>
                                     Vegetables
                                 </Link>
                             </li>
                             <li className={cx('menu-item__categories')}>
-                                <Link href="#" className={cx('menu-link__categories')}>
+                                <Link to="#" className={cx('menu-link__categories')}>
                                     Fruit & Nut Gifts
                                 </Link>
                             </li>
                             <li className={cx('menu-item__categories')}>
-                                <Link href="#" className={cx('menu-link__categories')}>
+                                <Link to="#" className={cx('menu-link__categories')}>
                                     Fresh Berries
                                 </Link>
                             </li>
                             <li className={cx('menu-item__categories')}>
-                                <Link href="#" className={cx('menu-link__categories')}>
+                                <Link to="#" className={cx('menu-link__categories')}>
                                     Ocean Foods
                                 </Link>
                             </li>
                             <li className={cx('menu-item__categories')}>
-                                <Link href="#" className={cx('menu-link__categories')}>
+                                <Link to="#" className={cx('menu-link__categories')}>
                                     Butter & Eggs
                                 </Link>
                             </li>
                             <li className={cx('menu-item__categories')}>
-                                <Link href="#" className={cx('menu-link__categories')}>
+                                <Link to="#" className={cx('menu-link__categories')}>
                                     Butter & Eggs
                                 </Link>
                             </li>
                             <li className={cx('menu-item__categories')}>
-                                <Link href="#" className={cx('menu-link__categories')}>
+                                <Link to="#" className={cx('menu-link__categories')}>
                                     Butter & Eggs
                                 </Link>
                             </li>
                             <li className={cx('menu-item__categories')}>
-                                <Link href="#" className={cx('menu-link__categories')}>
+                                <Link to="#" className={cx('menu-link__categories')}>
                                     Butter & Eggs
                                 </Link>
                             </li>
                             <li className={cx('menu-item__categories')}>
-                                <Link href="#" className={cx('menu-link__categories')}>
+                                <Link to="#" className={cx('menu-link__categories')}>
                                     Butter & Eggs
                                 </Link>
                             </li>
                             <li className={cx('menu-item__categories')}>
-                                <Link href="#" className={cx('menu-link__categories')}>
+                                <Link to="#" className={cx('menu-link__categories')}>
                                     Butter & Eggs
                                 </Link>
                             </li>

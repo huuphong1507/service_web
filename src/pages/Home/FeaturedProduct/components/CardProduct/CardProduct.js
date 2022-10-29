@@ -30,17 +30,17 @@ function CardProduct({ product }) {
                 <img src={product.img} alt={product.title} />
                 <ul className={cx('featured-image__menu')}>
                     <li className={cx('featured-image__menu-item')}>
-                        <Link href="#" className={cx('featured-image__menu-link')}>
+                        <Link to="#" className={cx('featured-image__menu-link')}>
                             <FontAwesomeIcon icon={faHeart} />
                         </Link>
                     </li>
                     <li className={cx('featured-image__menu-item')}>
-                        <Link href="#" className={cx('featured-image__menu-link')}>
+                        <Link to="#" className={cx('featured-image__menu-link')}>
                             <FontAwesomeIcon icon={faRepeat} />
                         </Link>
                     </li>
                     <li className={cx('featured-image__menu-item')} onClick={() => handleAddToCart(product)}>
-                        <Link href="#" className={cx('featured-image__menu-link')}>
+                        <Link to="#" className={cx('featured-image__menu-link')}>
                             <FontAwesomeIcon icon={faCartShopping} />
                         </Link>
                     </li>
@@ -48,7 +48,7 @@ function CardProduct({ product }) {
             </div>
             <div className={cx('featured__text')}>
                 <h6>
-                    <Link className={cx('featured__text__link')} href="#">
+                    <Link className={cx('featured__text__link')} to="#">
                         {product.title}
                     </Link>
                 </h6>

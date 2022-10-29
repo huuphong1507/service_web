@@ -15,7 +15,7 @@ function BannerDefault() {
                     100% Organic
                 </h2>
                 <p>Free Pickup and Delivery Available</p>
-                <Link href="#" className={cx('primary-btn')}>
+                <Link to="#" className={cx('primary-btn')}>
                     SHOP NOW
                 </Link>
             </div>

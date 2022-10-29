@@ -24,7 +24,7 @@ function BlogItem({ blog }) {
                     </p>
                 </div>
                 <h5 className={cx('blog-title')}>
-                    <Link className={cx('blog-title__link')} href="#">
+                    <Link className={cx('blog-title__link')} to="#">
                         {blog.title}
                     </Link>
                 </h5>

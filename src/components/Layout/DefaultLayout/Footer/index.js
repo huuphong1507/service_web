@@ -30,64 +30,64 @@ function Footer() {
                         <div className={cx('useful-list')}>
                             <ul className={cx('menu-links')}>
                                 <li className={cx('menu-links-item')}>
-                                    <Link href="#" className={cx('menu-link')}>
+                                    <Link to="#" className={cx('menu-link')}>
                                         About us
                                     </Link>
                                 </li>
                                 <li className={cx('menu-links-item')}>
-                                    <Link href="#" className={cx('menu-link')}>
+                                    <Link to="#" className={cx('menu-link')}>
                                         About us
                                     </Link>
                                 </li>
                                 <li className={cx('menu-links-item')}>
-                                    <Link href="#" className={cx('menu-link')}>
+                                    <Link to="#" className={cx('menu-link')}>
                                         About us
                                     </Link>
                                 </li>
                                 <li className={cx('menu-links-item')}>
-                                    <Link href="#" className={cx('menu-link')}>
+                                    <Link to="#" className={cx('menu-link')}>
                                         About us
                                     </Link>
                                 </li>
                                 <li className={cx('menu-links-item')}>
-                                    <Link href="#" className={cx('menu-link')}>
+                                    <Link to="#" className={cx('menu-link')}>
                                         About us
                                     </Link>
                                 </li>
                                 <li className={cx('menu-links-item')}>
-                                    <Link href="#" className={cx('menu-link')}>
+                                    <Link to="#" className={cx('menu-link')}>
                                         About us
                                     </Link>
                                 </li>
                             </ul>
                             <ul className={cx('menu-links')}>
                                 <li className={cx('menu-links-item')}>
-                                    <Link href="#" className={cx('menu-link')}>
+                                    <Link to="#" className={cx('menu-link')}>
                                         About us
                                     </Link>
                                 </li>
                                 <li className={cx('menu-links-item')}>
-                                    <Link href="#" className={cx('menu-link')}>
+                                    <Link to="#" className={cx('menu-link')}>
                                         About us
                                     </Link>
                                 </li>
                                 <li className={cx('menu-links-item')}>
-                                    <Link href="#" className={cx('menu-link')}>
+                                    <Link to="#" className={cx('menu-link')}>
                                         About us
                                     </Link>
                                 </li>
                                 <li className={cx('menu-links-item')}>
-                                    <Link href="#" className={cx('menu-link')}>
+                                    <Link to="#" className={cx('menu-link')}>
                                         About us
                                     </Link>
                                 </li>
                                 <li className={cx('menu-links-item')}>
-                                    <Link href="#" className={cx('menu-link')}>
+                                    <Link to="#" className={cx('menu-link')}>
                                         About us
                                     </Link>
                                 </li>
                                 <li className={cx('menu-links-item')}>
-                                    <Link href="#" className={cx('menu-link')}>
+                                    <Link to="#" className={cx('menu-link')}>
                                         About us
                                     </Link>
                                 </li>
@@ -104,16 +104,16 @@ function Footer() {
                             </button>
                         </form>
                         <div className={cx('footer__widget__socials')}>
-                            <Link className={cx('socials__icon')} href="#">
+                            <Link className={cx('socials__icon')} to="#">
                                 <FontAwesomeIcon icon={faFacebook} />
                             </Link>
-                            <Link className={cx('socials__icon')} href="#">
+                            <Link className={cx('socials__icon')} to="#">
                                 <FontAwesomeIcon icon={faInstagram} />
                             </Link>
-                            <Link className={cx('socials__icon')} href="#">
+                            <Link className={cx('socials__icon')} to="#">
                                 <FontAwesomeIcon icon={faTwitter} />
                             </Link>
-                            <Link className={cx('socials__icon')} href="#">
+                            <Link className={cx('socials__icon')} to="#">
                                 <FontAwesomeIcon icon={faPinterest} />
                             </Link>
                         </div>
@@ -125,7 +125,7 @@ function Footer() {
                             <p>
                                 Copyright ©2022 All rights reserved | This template is made with{' '}
                                 <FontAwesomeIcon icon={faHeart} /> by{' '}
-                                <Link className={cx('color-lib')} href="#">
+                                <Link className={cx('color-lib')} to="#">
                                     Colorlib
                                 </Link>
                             </p>

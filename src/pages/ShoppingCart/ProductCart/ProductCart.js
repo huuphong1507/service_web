@@ -67,10 +67,10 @@ function ProductCart() {
 
                     <div className={cx('shopping-cart-bottom')}>
                         <div className={cx('shopping-cart__btns')}>
-                            <Link className={cx('primary-cart-btn')} href="#">
+                            <Link className={cx('primary-cart-btn')} to="#">
                                 CONTINUE SHOPPING
                             </Link>
-                            <Link className={cx('primary-cart-btn', 'cart-btn-right')} href="#">
+                            <Link className={cx('primary-cart-btn', 'cart-btn-right')} to="#">
                                 <FontAwesomeIcon className={cx('cart-btn-right__icon')} icon={faSpinner} />
                                 Upadate Cart
                             </Link>
@@ -91,7 +91,7 @@ function ProductCart() {
                                         </span>
                                     </div>
                                     <div className={cx('checkout__proceed')}>
-                                        <Link className={cx('checkout__btn')} href="#">
+                                        <Link className={cx('checkout__btn')} to="#">
                                             PROCEED TO CHECKOUT
                                         </Link>
                                     </div>

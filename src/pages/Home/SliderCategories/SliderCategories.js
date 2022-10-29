@@ -56,7 +56,7 @@ function SliderCategories({ products }) {
                         <SwiperSlide className={cx('swiper-item')} key={product.productId}>
                             <img height="256" width="270" alt="img" className="image" src={product.img} />
                             <h5 className={cx('categories-item__title')}>
-                                <Link className={cx('categories-item__title__item')} href="#">
+                                <Link className={cx('categories-item__title__item')} to="#">
                                     {product.title}
                                 </Link>
                             </h5>
