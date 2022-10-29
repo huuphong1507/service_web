@@ -9,6 +9,22 @@ function Home() {
     const [filters, setFilters] = useState([]);
     const [blogs, setBlogs] = useState([]);
 
+    const [currentItems, setCurrentItems] = useState([]);
+    const [pageCount, setPageCount] = useState(0);
+    const [itemOffset, setItemOffset] = useState(0);
+    const itemsPerPage = 8;
+
+    useEffect(() => {
+        const endOffset = itemOffset + itemsPerPage;
+        setCurrentItems(products.slice(itemOffset, endOffset));
+        setPageCount(Math.ceil(products.length / itemsPerPage));
+    }, [itemOffset, itemsPerPage, products]);
+
+    const handlePageClick = (event) => {
+        const newOffset = (event.selected * itemsPerPage) % products.length;
+        setItemOffset(newOffset);
+    };
+
     // Call API Product, Categories
     useEffect(() => {
         fetchApiProducts();
@@ -36,7 +52,13 @@ function Home() {
         <>
             <CategoriesWithHero />
             <SliderCategories products={products} />
-            <FeaturedProduct products={products} filters={filters} setFilters={setFilters} />
+            <FeaturedProduct
+                products={currentItems}
+                filters={filters}
+                setFilters={setFilters}
+                pageCount={pageCount}
+                handlePageClick={handlePageClick}
+            />
             <FromBlog blogs={blogs} />
         </>
     );

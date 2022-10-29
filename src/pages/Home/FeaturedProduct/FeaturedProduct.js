@@ -5,10 +5,11 @@ import styles from './FeaturedProduct.module.scss';
 import FilterFeatured from './components/FilterFeatured/FilterFeatured';
 import { useEffect, useState } from 'react';
 import CardProduct from './components/CardProduct/CardProduct';
+import PaginationItems from '~/components/Layout/components/PaginationItems/PaginationItems';
 
 const cx = classNames.bind(styles);
 
-function FeaturedProduct({ products, filters, setFilters }) {
+function FeaturedProduct({ products, filters, setFilters, handlePageClick, pageCount }) {
     const [activeFilters, setActiveFilters] = useState('All');
 
     useEffect(() => {
@@ -42,6 +43,7 @@ function FeaturedProduct({ products, filters, setFilters }) {
                         ))}
                     </AnimatePresence>
                 </motion.div>
+                <PaginationItems pageCount={pageCount} handlePageClick={handlePageClick} />
             </div>
         </section>
     );
