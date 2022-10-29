@@ -4,9 +4,10 @@ import Contact from '~/pages/Contact/Contact';
 
 // Pages
 import Home from '~/pages/Home';
-import Search from '~/pages/Search';
 import Shop from '~/pages/Shop/Shop';
 import ShoppingCart from '~/pages/ShoppingCart/ShoppingCart';
+import Signin from '~/pages/Signin/Signin';
+import Signup from '~/pages/Signup/Signup';
 
 // Public routes
 const publicRoutes = [
@@ -15,7 +16,8 @@ const publicRoutes = [
     { path: config.routes.shoppingcart, component: ShoppingCart },
     { path: config.routes.blog, component: Blog },
     { path: config.routes.contact, component: Contact },
-    { path: config.routes.search, component: Search, layout: null },
+    { path: config.routes.signin, component: Signin, layout: null },
+    { path: config.routes.signup, component: Signup, layout: null },
 ];
 
 // Private routes

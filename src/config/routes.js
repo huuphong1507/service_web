@@ -4,7 +4,8 @@ const routes = {
     shoppingcart: '/shoppingcart',
     blog: '/blog',
     contact: '/contact',
-    search: '/search',
+    signin: '/signin',
+    signup: '/signup',
 };
 
 export default routes;
