@@ -3,6 +3,7 @@ import BannerContact from '~/components/Layout/components/BannerContact/BannerCo
 
 import CategoriesWithHero from '~/components/Layout/components/CategoriesWithHero/CategoriesWithHero';
 import styles from './Contact.module.scss';
+import ContactContent from './ContactContent/ContactContent';
 
 const cx = classNames.bind(styles);
 
@@ -14,7 +15,7 @@ function Contact() {
             </CategoriesWithHero>
             <div className={cx('wrapper')}>
                 <main className="content">
-                    <h2>Contact</h2>
+                    <ContactContent />
                 </main>
             </div>
         </>
