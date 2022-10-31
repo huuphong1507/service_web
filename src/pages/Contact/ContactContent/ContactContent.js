@@ -33,6 +33,17 @@ function ContactContent() {
                     </div>
                 </div>
             </div>
+            <div className={cx('contact__map')}>
+                <iframe
+                    className={cx('map-location')}
+                    frameborder="0"
+                    scrolling="no"
+                    marginHeight="0"
+                    marginWidth="0"
+                    src="https://maps.google.com/maps?q=Th%E1%BB%ABa%20Thi%C3%AAn%20Hu%E1%BA%BF&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    title="Map-Location"
+                />
+            </div>
         </section>
     );
 }
