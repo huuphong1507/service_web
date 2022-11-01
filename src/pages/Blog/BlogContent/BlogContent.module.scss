@@ -1,5 +1,6 @@
 .section__blog {
     margin: 100px 0;
+    max-width: 1350px;
 }
 
 .blog__container {
@@ -88,6 +89,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 60px 20px;
+    align-items: flex-end;
 }
 
 .blog__list__item {
