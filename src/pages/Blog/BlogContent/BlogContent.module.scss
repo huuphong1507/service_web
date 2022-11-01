@@ -1,0 +1,157 @@
+.section__blog {
+    margin: 100px 0;
+}
+
+.blog__container {
+    max-width: 1170px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.blog__container__content {
+    display: flex;
+    gap: 0 30px;
+}
+
+.blog__sidebar {
+    width: 360px;
+    padding-top: 50px;
+}
+
+.blog__sidebar__search {
+    margin-bottom: 50px;
+    position: relative;
+    display: flex;
+
+    input {
+        width: 100%;
+        height: 46px;
+        font-size: 16px;
+        color: #6f6f6f;
+        padding-left: 15px;
+        border: 1px solid #e1e1e1;
+        border-radius: 20px;
+    }
+
+    button {
+        font-size: 16px;
+        color: #6f6f6f;
+        background: transparent;
+        border: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        padding: 0 18px;
+    }
+}
+
+.blog__sidebar__item {
+    margin-bottom: 50px;
+
+    h2 {
+        color: #1c1c1c;
+        font-weight: 700;
+        margin-bottom: 25px;
+        font-size: 24px;
+        line-height: 1.2;
+    }
+}
+
+.blog__sidebar__menu {
+    padding: 0;
+    margin: 0;
+
+    li {
+        list-style: none;
+    }
+}
+
+.blog__sidebar__link {
+    font-size: 16px;
+    color: #666;
+    line-height: 48px;
+    transition: all , .3s;
+    background-color: transparent;
+    text-decoration: none;
+
+    &:hover {
+        color: #7fad39;
+        transition: all , .3s;
+    }
+}
+
+// Blog List
+
+.blog__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 60px 20px;
+}
+
+.blog__list__item {
+    width: 390px;
+}
+
+.blog__list__image {
+    width: 360px;
+    height: 259px;
+}
+
+.blog__list__text {
+    margin-top: 25px;
+}
+
+.blog__interactive {
+    display: flex;
+    gap: 0 15px;
+}
+
+.blog__date {
+    font-size: 16px;
+    color: #b2b2b2;
+    margin-right: 15px;
+}
+
+.date-icon {
+    margin-right: 6px;
+}
+
+.blog__comment {
+    font-size: 16px;
+    color: #b2b2b2;
+}
+
+.blog__title {
+    margin-top: 15px;
+    margin-bottom: 12px;
+
+    .blog__title__link {
+        font-size: 20px;
+        color: #1c1c1c;
+        font-weight: 700;
+    }
+}
+
+.blog__description {
+    font-size: 16px;
+    color: #6f6f6f;
+    font-weight: 400;
+    line-height: 26px;
+    margin-bottom: 25px;
+}
+
+.read-more-btn {
+    display: inline-block;
+    padding: 14px 20px 12px 20px;
+    border: 1px solid #b2b2b2;
+    letter-spacing: 1px;
+    border-radius: 25px;
+    font-size: 14px;
+    color: #1c1c1c;
+    
+    .arrow-icon {
+        margin-left: 5px;
+    }
+}
