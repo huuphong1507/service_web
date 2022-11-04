@@ -13,7 +13,6 @@ function PaginationBlogs({ pageCount, handlePageClick }) {
                 breakLabel="..."
                 nextLabel={<FontAwesomeIcon icon={faArrowRightLong} />}
                 onPageChange={handlePageClick}
-                pageRangeDisplayed={6}
                 pageCount={pageCount}
                 previousLabel={<FontAwesomeIcon icon={faArrowLeftLong} />}
                 renderOnZeroPageCount={null}
