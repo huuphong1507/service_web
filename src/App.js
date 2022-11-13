@@ -3,6 +3,14 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { publicRoutes } from '~/routes/routes';
 import { DefaultLayout } from '~/components/Layout';
 
+import '~/styles/rc-slider.css';
+// Import Swiper styles
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+
 function App() {
     return (
         <Router>
