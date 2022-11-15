@@ -21,7 +21,7 @@
 }
 
 .sidebar__department {
-    margin-bottom: 35px;
+    margin-bottom: 158px;
 }
 
 .sidebar__heading {
@@ -51,12 +51,25 @@
 
 // Sidebar Price
 .sidebar__price {
+    padding-top: 52px;
     margin-bottom: 35px;
+    border-top: 1px solid #ebebeb;
+}
+
+.rc-slider-handle.rc-slider-handle-1 {
+    box-shadow: rgb(0 0 0 / 20%) 0px 1px 10px;
+    border: 0;
+    opacity: 0;
+}
+
+.price__text {
+    margin-top: 12px;
+    text-align: center;
 }
 
 .price__text__text {
     font-size: 18px;
-    color: #7fad39;
+    color: #dd2222;
     font-weight: 800;
     max-width: 20%;
     border: none;
@@ -147,7 +160,7 @@
 
 // Sidebar Colors
 .sidebar__colors {
-
+    margin-bottom: 35px;
 }
 
 .sidebar__colors__options {
@@ -207,13 +220,75 @@
 .colors__item {
     display: flex;
     align-items: center;
-    gap: 0 10px;
+    gap: 10px;
+    margin-bottom: 12px;
 }
 
 .colors__text {
     font-size: 16px;
     color: #333333;
     cursor: pointer;
+
+    position: relative;
+    
+    &.check-active {
+        font-weight: 900;
+    }
+
+    &.check-active::after {
+        font-weight: 900;
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 100%;
+        height: 2px;
+        background: #7fad39;
+        content: "";
+    }
+}
+
+// Sidebar Popular Size
+.sidebar__size__options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 20px;
+}
+
+.size__item {
+    border-radius: 10px;
+    text-align: center;
+    border: none;
+    margin-right: 10px;
+    background-color: #f5f5f5;
+    height: 35px;
+
+    &:hover {
+        background-color: #7fad39;
+        transition: all 0.15s ease-in-out;
+    }
+}
+
+
+.size__text {
+    font-size: 12px;
+    font-weight: 800;
+    color: #6f6f6f;
+    display: inline-block;
+    border: 1px s;
+    cursor: pointer;
+    padding: 9px 0;
+    width: 100%;
+    transition: all 0.15s ease-in-out;
+    
+    &:hover {
+        color: #fff;
+    }
+}
+
+.active {
+    border-radius: 10px;
+    background-color: #7fad39;
+    color: #fff !important;
 }
 
 // Shop Product

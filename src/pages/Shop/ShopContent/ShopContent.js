@@ -116,13 +116,13 @@ function ShopContent({ products, pageCount, handlePageClick }) {
                                     min={0}
                                     max={600}
                                     onChange={rangeSelector}
-                                    trackStyle={[{ backgroundColor: '#7fad39' }]}
+                                    trackStyle={[{ backgroundColor: '#dd2222' }]}
                                     defaultValue={filters.price}
                                 />
                             </div>
                             <div className={cx('price__text')}>
                                 <span className={cx('price__text__text')}>
-                                    ${filters.price[0]} - ${filters.price[1]}
+                                    $ {filters.price[0]} - $ {filters.price[1]}
                                 </span>
                             </div>
                         </div>
@@ -131,7 +131,7 @@ function ShopContent({ products, pageCount, handlePageClick }) {
                             <div className={cx('sidebar__colors__options')}>
                                 <div className={cx('colors__item')}>
                                     <span className={cx('colors__white')}></span>
-                                    <span className={cx('colors__text')}>White</span>
+                                    <span className={cx('colors__text', 'check-active')}>White</span>
                                 </div>
                                 <div className={cx('colors__item')}>
                                     <span className={cx('colors__yellow')}></span>
@@ -152,6 +152,23 @@ function ShopContent({ products, pageCount, handlePageClick }) {
                                 <div className={cx('colors__item')}>
                                     <span className={cx('colors__green')}></span>
                                     <span className={cx('colors__text')}>Green</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className={cx('sidebar__size')}>
+                            <h1 className={cx('sidebar__heading')}>Popular Size</h1>
+                            <div className={cx('sidebar__size__options')}>
+                                <div className={cx('size__item')}>
+                                    <span className={cx('size__text', 'active')}>Large</span>
+                                </div>
+                                <div className={cx('size__item')}>
+                                    <span className={cx('size__text')}>Medium</span>
+                                </div>
+                                <div className={cx('size__item')}>
+                                    <span className={cx('size__text')}>Small</span>
+                                </div>
+                                <div className={cx('size__item')}>
+                                    <span className={cx('size__text')}>Tiny</span>
                                 </div>
                             </div>
                         </div>

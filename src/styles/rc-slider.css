@@ -31,21 +31,20 @@
     height: 14px;
     margin-top: -5px;
     background-color: #fff;
-    border: solid 2px #96dbfa;
     border-radius: 50%;
     cursor: pointer;
     cursor: -webkit-grab;
     cursor: grab;
-    opacity: 0.8;
     touch-action: pan-x;
+    box-shadow: rgb(0 0 0 / 20%) 0px 1px 10px;
   }
   .rc-slider-handle-dragging.rc-slider-handle-dragging.rc-slider-handle-dragging {
-    border-color: #57c5f7;
-    box-shadow: 0 0 0 5px #96dbfa;
+    border-color: #dd2222;
+    box-shadow: 0 0 0 2px #dd2222;
   }
   .rc-slider-handle:focus {
     outline: none;
-    box-shadow: none;
+    box-shadow: rgb(0 0 0 / 20%) 0px 1px 10px;
   }
   .rc-slider-handle:focus-visible {
     border-color: #2db7f5;
