@@ -6,49 +6,17 @@ import { useMemo, useRef, useState } from 'react';
 import { A11y, Controller, Navigation, Pagination, Scrollbar, Swiper as SwiperRef } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import Slider from 'rc-slider';
-
 import SwiperCore, { Autoplay } from 'swiper';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilter, faListUl } from '@fortawesome/free-solid-svg-icons';
 import CardProduct from '~/pages/Home/FeaturedProduct/components/CardProduct/CardProduct';
 import PaginationItems from '~/components/Layout/components/PaginationItems/PaginationItems';
+import ShopSidebar from '../ShopSidebar/ShopSidebar';
 
 const cx = classNames.bind(styles);
 
-const departments = [
-    {
-        id: 1,
-        name: 'Fresh Meat',
-    },
-    {
-        id: 2,
-        name: 'Vegetables',
-    },
-    {
-        id: 3,
-        name: 'Fruit & Nut Gifts',
-    },
-    {
-        id: 4,
-        name: 'Fresh Berries',
-    },
-    {
-        id: 5,
-        name: 'Ocean Foods',
-    },
-    {
-        id: 6,
-        name: 'Butter & Eggs',
-    },
-    {
-        id: 7,
-        name: 'Fastfood',
-    },
-];
-
 function ShopContent({ products, pageCount, handlePageClick }) {
-    const [filters, setFilters] = useState({
+    const [filtersProduct, setFiltersProduct] = useState({
         price: [0, 600],
     });
     const [showSortBy, setShowSortBy] = useState(false);
@@ -56,7 +24,7 @@ function ShopContent({ products, pageCount, handlePageClick }) {
     const swiperRef = useRef(SwiperRef);
 
     const rangeSelector = (newValue) => {
-        setFilters((prevFilter) => {
+        setFiltersProduct((prevFilter) => {
             return {
                 ...prevFilter,
                 price: newValue,
@@ -70,109 +38,37 @@ function ShopContent({ products, pageCount, handlePageClick }) {
         setShowSortBy(!showSortBy);
     };
 
-    const handleFilterProduct = (products, filters) => {
-        const filterKeys = Object.keys(filters);
+    const handleFilterProduct = (products, filtersProduct) => {
+        const filterKeys = Object.keys(filtersProduct);
+        console.log(filterKeys);
         const productsFilter = products.filter((product) => {
             // eslint-disable-next-line array-callback-return
             return filterKeys.every((key) => {
                 if (key === 'price') {
-                    const [min, max] = filters[key];
+                    const [min, max] = filtersProduct[key];
                     return product[key] >= min && product[key] <= max;
                 }
-                if (key === 'title') {
-                    return product[key].includes(filters[key]);
+                if (key === 'size') {
+                    return product[key].includes(filtersProduct[key]);
                 }
             });
         });
+        console.log(productsFilter);
         return productsFilter;
     };
 
     const productsFilters = useMemo(() => {
-        return handleFilterProduct(products, filters);
-    }, [products, filters]);
+        return handleFilterProduct(products, filtersProduct);
+    }, [products, filtersProduct]);
     return (
         <section className={cx('wrapper')}>
             <div className={cx('shop__container')}>
                 <div className={cx('shop__container__content')}>
-                    <div className={cx('shop__sidebar')}>
-                        <div className={cx('sidebar__department')}>
-                            <h1 className={cx('sidebar__heading')}>Department</h1>
-                            <ul className={cx('menu')}>
-                                {departments.map((department) => (
-                                    <li key={department.id} className={cx('menu-item')}>
-                                        <Link to="#" className={cx('menu-link')}>
-                                            {department.name}
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                        <div className={cx('sidebar__price')}>
-                            <h1 className={cx('sidebar__heading')}>Price</h1>
-                            <div className={cx('price__wrapper')}>
-                                <Slider
-                                    range
-                                    allowCross={false}
-                                    min={0}
-                                    max={600}
-                                    onChange={rangeSelector}
-                                    trackStyle={[{ backgroundColor: '#dd2222' }]}
-                                    defaultValue={filters.price}
-                                />
-                            </div>
-                            <div className={cx('price__text')}>
-                                <span className={cx('price__text__text')}>
-                                    $ {filters.price[0]} - $ {filters.price[1]}
-                                </span>
-                            </div>
-                        </div>
-                        <div className={cx('sidebar__colors')}>
-                            <h1 className={cx('sidebar__heading')}>Colors</h1>
-                            <div className={cx('sidebar__colors__options')}>
-                                <div className={cx('colors__item')}>
-                                    <span className={cx('colors__white')}></span>
-                                    <span className={cx('colors__text', 'check-active')}>White</span>
-                                </div>
-                                <div className={cx('colors__item')}>
-                                    <span className={cx('colors__yellow')}></span>
-                                    <span className={cx('colors__text')}>Yellow</span>
-                                </div>
-                                <div className={cx('colors__item')}>
-                                    <span className={cx('colors__red')}></span>
-                                    <span className={cx('colors__text')}>Red</span>
-                                </div>
-                                <div className={cx('colors__item')}>
-                                    <span className={cx('colors__black')}></span>
-                                    <span className={cx('colors__text')}>Black</span>
-                                </div>
-                                <div className={cx('colors__item')}>
-                                    <span className={cx('colors__blue')}></span>
-                                    <span className={cx('colors__text')}>Blue</span>
-                                </div>
-                                <div className={cx('colors__item')}>
-                                    <span className={cx('colors__green')}></span>
-                                    <span className={cx('colors__text')}>Green</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className={cx('sidebar__size')}>
-                            <h1 className={cx('sidebar__heading')}>Popular Size</h1>
-                            <div className={cx('sidebar__size__options')}>
-                                <div className={cx('size__item')}>
-                                    <span className={cx('size__text', 'active')}>Large</span>
-                                </div>
-                                <div className={cx('size__item')}>
-                                    <span className={cx('size__text')}>Medium</span>
-                                </div>
-                                <div className={cx('size__item')}>
-                                    <span className={cx('size__text')}>Small</span>
-                                </div>
-                                <div className={cx('size__item')}>
-                                    <span className={cx('size__text')}>Tiny</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <ShopSidebar
+                        filtersProduct={filtersProduct}
+                        setFiltersProduct={setFiltersProduct}
+                        rangeSelector={rangeSelector}
+                    />
                     <div className={cx('shop__content')}>
                         <h1 className={cx('shop__heading')}>Sale Off</h1>
                         <div className={cx('shop__slider')}>
