@@ -40,7 +40,7 @@ function ShopContent({ products, pageCount, handlePageClick }) {
 
     const handleFilterProduct = (products, filtersProduct) => {
         const filterKeys = Object.keys(filtersProduct);
-        console.log(filterKeys);
+        console.log(filterKeys, 'filter');
         const productsFilter = products.filter((product) => {
             // eslint-disable-next-line array-callback-return
             return filterKeys.every((key) => {
@@ -48,12 +48,14 @@ function ShopContent({ products, pageCount, handlePageClick }) {
                     const [min, max] = filtersProduct[key];
                     return product[key] >= min && product[key] <= max;
                 }
+                if (key === 'color') {
+                    return product[key].includes(filtersProduct[key]);
+                }
                 if (key === 'size') {
                     return product[key].includes(filtersProduct[key]);
                 }
             });
         });
-        console.log(productsFilter);
         return productsFilter;
     };
 

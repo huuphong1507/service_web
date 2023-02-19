@@ -83,19 +83,45 @@ const sizes = [
 ];
 
 function ShopSidebar({ filtersProduct, setFiltersProduct, rangeSelector }) {
-    const [activeId, setActiveId] = useState();
+    const [activeSizeId, setActiveSizeId] = useState();
+    const [activeColorId, setActiveColorId] = useState();
 
-    const handleHideActive = (size) => {
-        setFiltersProduct((prev) => {
-            return {
+    const handleHideActiveColor = (color) => {
+        const isExistFilterColor = filtersProduct.color === color.text;
+        if (isExistFilterColor) {
+            setActiveColorId(null);
+            setFiltersProduct((prev) => {
+                delete prev.color;
+                return {
+                    ...prev,
+                };
+            });
+        } else {
+            setFiltersProduct((prev) => ({
+                ...prev,
+                color: color.text,
+            }));
+            setActiveColorId(color.id);
+        }
+    };
+
+    const handleHideActiveSize = (size) => {
+        const isExistFilterSize = filtersProduct.size === size.popularSize;
+        if (isExistFilterSize) {
+            setActiveSizeId(null);
+            setFiltersProduct((prev) => {
+                delete prev.size;
+                return {
+                    ...prev,
+                };
+            });
+        } else {
+            setFiltersProduct((prev) => ({
                 ...prev,
                 size: size.popularSize,
-            };
-        });
-        setActiveId((prev) => {
-            if (prev === size.id) return undefined;
-            else return size.id;
-        });
+            }));
+            setActiveSizeId(size.id);
+        }
     };
 
     return (
@@ -137,7 +163,12 @@ function ShopSidebar({ filtersProduct, setFiltersProduct, rangeSelector }) {
                     {colors.map((color) => (
                         <div key={color.id} className={cx('colors__item')}>
                             <span className={cx(`colors__${color.text}`)}></span>
-                            <span className={cx('colors__text')}>
+                            <span
+                                className={cx('colors__text', {
+                                    activeColor: activeColorId === color.id ? 'activeColor' : '',
+                                })}
+                                onClick={() => handleHideActiveColor(color)}
+                            >
                                 {color.text.charAt(0).toUpperCase() + color.text.slice(1)}
                             </span>
                         </div>
@@ -152,14 +183,14 @@ function ShopSidebar({ filtersProduct, setFiltersProduct, rangeSelector }) {
                             key={size.id}
                             className={cx('size__item')}
                             style={{
-                                backgroundColor: activeId === size.id ? '#7fad39' : '#f5f5f5',
+                                backgroundColor: activeSizeId === size.id ? '#7fad39' : '#f5f5f5',
                             }}
                         >
                             <span
                                 className={cx('size__text')}
-                                onClick={() => handleHideActive(size)}
+                                onClick={() => console.log(handleHideActiveSize(size))}
                                 style={{
-                                    color: activeId === size.id ? '#f5f5f5' : '#6f6f6f',
+                                    color: activeSizeId === size.id ? '#f5f5f5' : '#6f6f6f',
                                 }}
                             >
                                 {size.popularSize}

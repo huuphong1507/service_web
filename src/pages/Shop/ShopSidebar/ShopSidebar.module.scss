@@ -129,21 +129,21 @@
     cursor: pointer;
 
     position: relative;
-    
-    &.active__color {
-        font-weight: 900;
-    }
+}
 
-    &.active__color::after {
-        font-weight: 900;
-        position: absolute;
-        left: 0;
-        bottom: -2px;
-        width: 100%;
-        height: 2px;
-        background: #7fad39;
-        content: "";
-    }
+.activeColor {
+    font-weight: 900;
+}
+
+.activeColor::after {
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background: #7fad39;
+    content: "";
 }
 
 // Sidebar Popular Size

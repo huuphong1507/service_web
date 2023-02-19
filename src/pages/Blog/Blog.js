@@ -16,7 +16,9 @@ function Blog() {
         try {
             const fetchApiBlogs = async () => {
                 const paramsString = queryString.stringify(filters);
-                const dataBlogs = await fetch(`https://ogani-api-web.herokuapp.com/api/blogs?${paramsString}`);
+                const dataBlogs = await fetch(
+                    `https://json-api-web-production.up.railway.app/api/blogs?${paramsString}`,
+                );
                 const blogs = await dataBlogs.json();
                 setBlogs(blogs);
             };

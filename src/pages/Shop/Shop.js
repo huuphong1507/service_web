@@ -27,7 +27,7 @@ function Shop() {
     }, []);
 
     const fetchApiProducts = async () => {
-        const data = await fetch('https://ogani-api-web.herokuapp.com/api/products');
+        const data = await fetch('https://json-api-web-production.up.railway.app/api/products');
         const products = await data.json();
         setProducts(products);
     };

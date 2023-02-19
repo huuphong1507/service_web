@@ -31,7 +31,7 @@ function Home() {
     }, []);
 
     const fetchApiProducts = async () => {
-        const data = await fetch('https://ogani-api-web.herokuapp.com/api/products');
+        const data = await fetch('https://json-api-web-production.up.railway.app/api/products');
         const products = await data.json();
         setProducts(products);
         setFilters(products);
@@ -43,7 +43,7 @@ function Home() {
     }, []);
 
     const fetchApiBlogs = async () => {
-        const dataBlogs = await fetch('https://ogani-api-web.herokuapp.com/api/blogs');
+        const dataBlogs = await fetch('https://json-api-web-production.up.railway.app/api/blogs');
         const blogs = await dataBlogs.json();
         setBlogs(blogs);
     };
